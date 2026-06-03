@@ -5,50 +5,427 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>OWTS Graphic Design Alum</title>
   <meta name="description" content="Oliver Wolcott Technical High School Graphic Design and Digital Media alumni site." />
+
   <style>
     :root{
-      --ink:#111; --muted:#666; --paper:#fff; --soft:#f6f3ef; --line:#e9e2d8; --accent:#d7a45b;
+      --ink:#111;
+      --muted:#666;
+      --paper:#fff;
+      --soft:#f6f3ef;
+      --line:#e9e2d8;
+      --accent:#d7a45b;
     }
-    *{box-sizing:border-box} html{scroll-behavior:smooth}
-    body{margin:0;font-family:Arial,Helvetica,sans-serif;color:var(--ink);background:var(--paper);line-height:1.55}
-    a{color:inherit} img{max-width:100%;display:block}
-    .topbar{position:sticky;top:0;z-index:10;background:rgba(255,255,255,.94);border-bottom:1px solid var(--line);backdrop-filter:blur(10px)}
-    .nav{max-width:1180px;margin:auto;display:flex;align-items:center;justify-content:space-between;padding:16px 22px;gap:20px}
-    .brand{font-weight:900;letter-spacing:.08em;text-transform:uppercase;font-size:14px;line-height:1.2;text-decoration:none}
-    .links{display:flex;gap:18px;flex-wrap:wrap;justify-content:flex-end}.links a{text-decoration:none;font-size:12px;font-weight:800;letter-spacing:.08em}.links a:hover{color:var(--accent)}
-    .hero{min-height:78vh;display:grid;place-items:center;background:linear-gradient(rgba(0,0,0,.42),rgba(0,0,0,.42)),url('https://static.wixstatic.com/media/f324a7_6b2cac74b6fd431399838af5d510baa3~mv2.png/v1/fill/w_1600,h_1000,al_c,q_90/GRAPHICS%20PIC.png') center/cover;color:white;text-align:center;padding:90px 22px}
-    .hero h1{font-size:clamp(48px,8vw,112px);line-height:.9;margin:0;text-transform:uppercase;letter-spacing:.04em}.hero p{font-size:clamp(20px,3vw,36px);margin:22px auto;max-width:760px}.btn{display:inline-block;background:white;color:#111;text-decoration:none;padding:13px 22px;font-weight:900;letter-spacing:.08em;text-transform:uppercase;font-size:12px;border:2px solid white}.btn:hover{background:transparent;color:white}
-    section{padding:78px 22px}.wrap{max-width:1120px;margin:auto}.eyebrow{font-size:12px;letter-spacing:.18em;text-transform:uppercase;font-weight:900;color:var(--accent)}h2{font-size:clamp(34px,5vw,68px);line-height:.95;margin:8px 0 28px;text-transform:uppercase}.intro{display:grid;grid-template-columns:1fr 1.1fr;gap:42px;align-items:center}.intro img{border-radius:2px;box-shadow:18px 18px 0 var(--soft)}.lead{font-size:20px;color:#333}
-    .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:26px}.card{background:var(--soft);border:1px solid var(--line);overflow:hidden}.card img{width:100%;aspect-ratio:394/552;object-fit:cover}.card div{padding:22px}.card h3{font-size:26px;margin:0 0 4px;text-transform:uppercase}.card small{font-weight:900;color:var(--muted);letter-spacing:.08em}.quote{font-size:14px;text-transform:uppercase;font-weight:900;margin-top:16px}.read{margin-top:14px;display:inline-block;font-weight:900;text-decoration:none;color:#7b4d0f}.profile{padding-top:24px;border-top:1px solid var(--line);margin-top:24px}.profile h4{margin:18px 0 5px;font-size:13px;letter-spacing:.1em;text-transform:uppercase}.profile p{margin:0 0 12px}.profile a{color:#7b4d0f;font-weight:800}
-    .alumni-detail{background:#fff}.alumni-detail:nth-of-type(odd){background:#fbfaf8}.split{display:grid;grid-template-columns:360px 1fr;gap:46px;align-items:start}.portrait{position:sticky;top:90px}.portrait img{width:100%;border:1px solid var(--line)}blockquote{margin:18px 0 0;padding:18px;border-left:5px solid var(--accent);font-weight:900;text-transform:uppercase;background:var(--soft)}
-    .contact{background:#161616;color:white}.contact .box{background:#222;padding:34px;border:1px solid #333}.contact a{color:white;font-weight:900}.footer{padding:28px 22px;text-align:center;color:var(--muted);font-size:13px;border-top:1px solid var(--line)}
-    @media(max-width:850px){.nav{align-items:flex-start;flex-direction:column}.links{justify-content:flex-start}.intro,.split{grid-template-columns:1fr}.grid{grid-template-columns:1fr}.portrait{position:static}.hero{min-height:64vh}}
+
+    *{box-sizing:border-box}
+
+    html{scroll-behavior:smooth}
+
+    body{
+      margin:0;
+      font-family:Arial, Helvetica, sans-serif;
+      color:var(--ink);
+      background:var(--paper);
+      line-height:1.55;
+    }
+
+    a{color:inherit}
+    img{max-width:100%;display:block}
+
+    .topbar{
+      position:sticky;
+      top:0;
+      z-index:10;
+      background:rgba(255,255,255,.94);
+      border-bottom:1px solid var(--line);
+      backdrop-filter:blur(10px);
+    }
+
+    .nav{
+      max-width:1180px;
+      margin:auto;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      padding:16px 22px;
+      gap:20px;
+    }
+
+    .brand{
+      font-weight:900;
+      letter-spacing:.08em;
+      text-transform:uppercase;
+      font-size:14px;
+      line-height:1.2;
+      text-decoration:none;
+    }
+
+    .links{
+      display:flex;
+      gap:18px;
+      flex-wrap:wrap;
+      justify-content:flex-end;
+    }
+
+    .links a{
+      text-decoration:none;
+      font-size:12px;
+      font-weight:800;
+      letter-spacing:.08em;
+    }
+
+    .links a:hover{color:var(--accent)}
+
+    .hero{
+      min-height:78vh;
+      display:grid;
+      place-items:center;
+      background:
+        linear-gradient(rgba(0,0,0,.42), rgba(0,0,0,.42)),
+        url('https://static.wixstatic.com/media/f324a7_6b2cac74b6fd431399838af5d510baa3~mv2.png/v1/fill/w_1600,h_1000,al_c,q_90/GRAPHICS%20PIC.png') center/cover;
+      color:white;
+      text-align:center;
+      padding:90px 22px;
+    }
+
+    .hero-inner{
+      width:100%;
+      max-width:1400px;
+      margin:auto;
+    }
+
+    .hero h1{
+      font-size:clamp(36px, 5.4vw, 86px);
+      line-height:1;
+      margin:0;
+      text-transform:uppercase;
+      letter-spacing:.025em;
+      white-space:nowrap;
+      font-weight:900;
+    }
+
+    .hero p{
+      font-family:"Times New Roman", Times, serif;
+      font-size:clamp(17px, 1.8vw, 25px);
+      line-height:1.28;
+      margin:22px auto 28px;
+      max-width:650px;
+      font-weight:400;
+    }
+
+    .btn{
+      display:inline-block;
+      background:white;
+      color:#111;
+      text-decoration:none;
+      padding:13px 22px;
+      font-weight:900;
+      letter-spacing:.08em;
+      text-transform:uppercase;
+      font-size:12px;
+      border:2px solid white;
+    }
+
+    .btn:hover{
+      background:transparent;
+      color:white;
+    }
+
+    section{padding:78px 22px}
+
+    .wrap{
+      max-width:1120px;
+      margin:auto;
+    }
+
+    .eyebrow{
+      font-size:12px;
+      letter-spacing:.18em;
+      text-transform:uppercase;
+      font-weight:900;
+      color:var(--accent);
+    }
+
+    h2{
+      font-size:clamp(34px,5vw,68px);
+      line-height:.95;
+      margin:8px 0 28px;
+      text-transform:uppercase;
+    }
+
+    .intro{
+      display:grid;
+      grid-template-columns:1fr 1.1fr;
+      gap:42px;
+      align-items:center;
+    }
+
+    .intro img{
+      border-radius:2px;
+      box-shadow:18px 18px 0 var(--soft);
+    }
+
+    .lead{
+      font-size:20px;
+      color:#333;
+    }
+
+    .grid{
+      display:grid;
+      grid-template-columns:repeat(3,1fr);
+      gap:26px;
+    }
+
+    .card{
+      background:var(--soft);
+      border:1px solid var(--line);
+      overflow:hidden;
+    }
+
+    .card img{
+      width:100%;
+      aspect-ratio:394/552;
+      object-fit:cover;
+    }
+
+    .card div{padding:22px}
+
+    .card h3{
+      font-size:26px;
+      margin:0 0 4px;
+      text-transform:uppercase;
+    }
+
+    .card small{
+      font-weight:900;
+      color:var(--muted);
+      letter-spacing:.08em;
+    }
+
+    .quote{
+      font-size:14px;
+      text-transform:uppercase;
+      font-weight:900;
+      margin-top:16px;
+    }
+
+    .read{
+      margin-top:14px;
+      display:inline-block;
+      font-weight:900;
+      text-decoration:none;
+      color:#7b4d0f;
+    }
+
+    .profile{
+      padding-top:24px;
+      border-top:1px solid var(--line);
+      margin-top:24px;
+    }
+
+    .profile h4{
+      margin:18px 0 5px;
+      font-size:13px;
+      letter-spacing:.1em;
+      text-transform:uppercase;
+    }
+
+    .profile p{margin:0 0 12px}
+    .profile a{color:#7b4d0f;font-weight:800}
+
+    .alumni-detail{background:#fff}
+    .alumni-detail:nth-of-type(odd){background:#fbfaf8}
+
+    .split{
+      display:grid;
+      grid-template-columns:360px 1fr;
+      gap:46px;
+      align-items:start;
+    }
+
+    .portrait{
+      position:sticky;
+      top:90px;
+    }
+
+    .portrait img{
+      width:100%;
+      border:1px solid var(--line);
+    }
+
+    blockquote{
+      margin:18px 0 0;
+      padding:18px;
+      border-left:5px solid var(--accent);
+      font-weight:900;
+      text-transform:uppercase;
+      background:var(--soft);
+    }
+
+    .contact{
+      background:#161616;
+      color:white;
+    }
+
+    .contact .box{
+      background:#222;
+      padding:34px;
+      border:1px solid #333;
+    }
+
+    .contact a{
+      color:white;
+      font-weight:900;
+    }
+
+    .footer{
+      padding:28px 22px;
+      text-align:center;
+      color:var(--muted);
+      font-size:13px;
+      border-top:1px solid var(--line);
+    }
+
+    @media(max-width:1000px){
+      .hero h1{
+        font-size:clamp(34px, 8vw, 70px);
+        white-space:normal;
+      }
+    }
+
+    @media(max-width:850px){
+      .nav{
+        align-items:flex-start;
+        flex-direction:column;
+      }
+
+      .links{justify-content:flex-start}
+      .intro,.split{grid-template-columns:1fr}
+      .grid{grid-template-columns:1fr}
+      .portrait{position:static}
+      .hero{min-height:64vh}
+    }
   </style>
 </head>
+
 <body>
-<header class="topbar"><nav class="nav"><a class="brand" href="#home">OWTS Graphic Design<br>Alum</a><div class="links"><a href="#home">Home</a><a href="#alumni">Alumni</a><a href="#about">About</a><a href="#questions">Questions?</a></div></nav></header>
-<main id="home">
-<section class="hero"><div><h1>OWTS Graphic Design Alum</h1><p>Graphic Design and Digital Media alumni stories from Oliver Wolcott Technical High School.</p><a class="btn" href="#alumni">Meet the Alumni</a></div></section>
-<section id="about"><div class="wrap intro"><img src="https://static.wixstatic.com/media/f324a7_6b2cac74b6fd431399838af5d510baa3~mv2.png/v1/fill/w_980,h_735,al_c,q_90/GRAPHICS%20PIC.png" alt="Graphic design classroom"><div><span class="eyebrow">Graphic Design and Digital Media</span><h2>OWTS Graphics Dept.</h2><p class="lead">The Graphic Design department at Oliver Wolcott Technical High School is a multi-layered learning experience offered through the school’s exploratory program to students entering in 9th grade.</p><p>Over four years, graphics students learn the essential skills required to excel in graphic design and digital media. Through projects, assessments and presentations, students gain deeper understanding of the Adobe Creative Suite as well as real-life production work from local businesses.</p></div></div></section>
-<section id="alumni"><div class="wrap"><span class="eyebrow">Stories</span><h2>Alumni</h2><div class="grid" id="cards"></div></div></section>
-<div id="profiles"></div>
-<section id="questions" class="contact"><div class="wrap"><span class="eyebrow">Questions?</span><h2>Get in touch</h2><div class="box"><p>Deciding which trade you want can be difficult. For questions about the program, curriculum, or studying graphic design at Oliver Wolcott Tech:</p><p><strong>Email</strong><br><a href="mailto:david.garcia@cttech.org">david.garcia@cttech.org</a></p><p><strong>Phone</strong><br><a href="tel:8604965319">860.496.5319</a></p></div></div></section>
-</main><footer class="footer">OWTS Graphic Design Alum — static HTML recreation for GitHub and Vercel.</footer>
-<script>
-const alumni=[
-{name:'Rachel Rosa',nav:'Rachel',year:'2014',image:'https://static.wixstatic.com/media/f324a7_ce6f69fd09bc4c798b080aede1f7865e~mv2.png/v1/crop/x_0,y_0,w_1593,h_2233/fill/w_394,h_552,al_c,q_85/rachel.png',quote:'I was one of the first students in my class to receive a paid internship as well as a full-time job offer after graduation.',college:'BFA: Visual Communication Design – University of Hartford',work:'Art Director / WORX Branding',choose:'Passion for art and design, lots of career paths to choose from.',stay:'Constant love for learning and maintaining skills, ability to specialize in animation, illustration, 3D, and the desire to create daily.',prepared:'Yes, I entered the UHart design program at a much higher level so I was able to advance much more quickly.',links:[['worxbranding.com','https://worxbranding.com'],['rachelrosadesign.myportfolio.com','https://rachelrosadesign.myportfolio.com']]},
-{name:'Zoe Orie',nav:'Zoe',year:'2021',image:'https://static.wixstatic.com/media/f324a7_806ea782c09c4c4d8a9d8e2e8516116d~mv2.jpg/v1/crop/x_0,y_58,w_1170,h_1639/fill/w_394,h_552,al_c,q_80/zoe.jpg',quote:"I would have never found this career if not for OWTS, and now I can't see myself doing anything else.",college:'UConn BFA in Digital Media and Design, Web Design and Interactive Media concentration.',work:'5W PR, New York, NY',choose:'After exploratory, I realized I had a passion for design that I didn’t know existed.',stay:'OWTS set me up with a great foundation that I am now expanding upon with different mediums, platforms, and design pathways.',prepared:'OWTS graphics allowed me to start my career early and gave me a solid base of skills that I’m constantly expanding.',links:[['zoeorie.com','https://zoeorie.com']]},
-{name:'Emily Moses',nav:'Emily',year:'2017',image:'https://static.wixstatic.com/media/f324a7_e79dcba6e8724d438f4e9b57da12348f~mv2.jpeg/v1/crop/x_26,y_0,w_879,h_1232/fill/w_394,h_552,al_c,q_80/emily.jpeg',quote:'I developed a passion for video editing when I was 15 and that passion never died!',college:'UConn Stamford — BA Digital Media and Design',work:'Assistant Editor — MrBeast',choose:'Through exploratory I became very interested in what the shop had to offer.',stay:'I developed a passion for video editing when I was 15 and that passion never died.',prepared:'Being taught the Adobe Suite throughout high school gave me the skills to excel in college and production.',links:[['Portfolio','https://emosesmedia-portfolio.squarespace.com/']]},
-{name:'Laura Calver',nav:'Laura',year:'2015',image:'https://static.wixstatic.com/media/f324a7_442d715eb7aa460c91f05804cce520b5~mv2.png/v1/crop/x_402,y_0,w_954,h_1338/fill/w_394,h_552,al_c,q_85/laura.png',quote:'Having a background in graphics prior to becoming a worker has made me more confident.',college:'',work:'Digital Print Associate / Art Department',choose:'I was really into drawing at the time, and Graphics was the closest I was going to get to drawing without college.',stay:'I work in the manufacturing side and enjoy paper, print solutions, presses, and troubleshooting.',prepared:'100%. Having a background made me more confident with terminology and processes.',links:[['Threshold Security','https://www.thresholdsecurity.com/m/default_mobile.asp']]},
-{name:'Dylan Hull',nav:'Dylan',year:'2021',image:'https://static.wixstatic.com/media/f324a7_30d3d1a6b951454399d6dfb0abb828c6~mv2.png/v1/crop/x_0,y_36,w_1244,h_1743/fill/w_394,h_552,al_c,q_85/dylan.png',quote:'I’ve always had a passion for digital media.',college:'Digital Design & Media at Northwestern',work:'Production Assistant at Harwinton Graphics and Social Media Manager for Organic Cotton Plus',choose:'The opportunity to further my skills and get hands-on experience instantly made me choose graphics.',stay:'The inspiration from Mr. Garcia kept me going in the field.',prepared:'Hands-on production, machines, and screen printing helped me get the job I have now.',links:[['Instagram','https://instagram.com/dylangfxs/']]},
-{name:'Steven Bechard',nav:'Steven',year:'2018',image:'https://static.wixstatic.com/media/f324a7_159f1854caa64efb93a42325f30eca88~mv2.png/v1/crop/x_207,y_0,w_1112,h_1558/fill/w_394,h_552,al_c,q_85/steven.png',quote:'I liked that graphics allowed me to be both creative and unique.',college:'',work:'Freelance Graphic Designer and Owner of BProuder',choose:'The exploratory graphics instructor helped me discover my calling.',stay:'Graphics allowed me to be both creative and unique.',prepared:'Taking this trade gave me a much better foundation in design.',links:[['Bprouder.com','https://Bprouder.com']]},
-{name:'Kaitlyn Carey',nav:'Kaitlyn',year:'2013',image:'https://static.wixstatic.com/media/f324a7_a0463284d40248608b5ab376c1cd6529~mv2.png/v1/crop/x_93,y_0,w_407,h_570/fill/w_394,h_552,al_c,q_85/kaitlyn.png',quote:'Technical school gave me creative problem-solving skills.',college:'',work:'Sampling Department Manager — twenty2 Wallpaper + Textiles',choose:'A love for photography.',stay:'The ability to work with creative individuals in a constantly evolving arts-based industry.',prepared:'Technical school gave me creative problem-solving skills that have made me successful.',links:[['TWENTY2.NET','https://twenty2.net'],['HEVVYBYKC.COM','https://hevvybykc.com']]},
-{name:'Miyah A',nav:'Miyah',year:'2020',image:'https://static.wixstatic.com/media/f324a7_aed251d8a64a435b9f022f7ce0e262c9~mv2.jpeg/v1/crop/x_58,y_0,w_1090,h_1527/fill/w_394,h_552,al_c,q_80/miyah.jpeg',quote:'I use my graphic design experience to design tattoo stencils, business cards and aftercare sheets.',college:'Northwestern Community College Graphic Design program',work:'Tattoo apprentice at Xclusive Ink in Rocky Hill, CT',choose:'I love art, and through that developed a love for design.',stay:'I’ve always wanted to do something creative and pursue freelancing.',prepared:'Graphic Design prepared me for college and put me ahead of my class.',links:[['Design work','https://miyaha1023.wixsite.com/mysite/design-work']]},
-{name:'Angeleah C',nav:'Angel',year:'2023',image:'https://static.wixstatic.com/media/f324a7_4207bf1524ef40e593576238ef9a0669~mv2.jpeg/v1/crop/x_0,y_89,w_1284,h_1799/fill/w_394,h_552,al_c,q_80/angel.jpeg',quote:'Graphic design gives me freedom and the ability to be creative however I want.',college:'Northwestern Community College — Marketing',work:'Freelance Graphic Designer',choose:'I picked graphics on a whim, but I’ve always had a passion for creating work people could see.',stay:'The opportunities in this field are endless and there is so much to explore.',prepared:'Adobe software, typography, layout and printing gave me a head start.',links:[['Behance','https://www.behance.net/angeleahcastillo']]},
-{name:'Dave G',nav:'Dave',year:'1999',image:'https://static.wixstatic.com/media/f324a7_0ef233bedfab4946b56f30dda40f3ce7~mv2.jpg/v1/crop/x_784,y_0,w_1598,h_2239/fill/w_394,h_552,al_c,q_80/dave.jpg',quote:'OWTS allowed me to turn my childhood interest into a life-long profession.',college:'Northwestern Community College; University of Connecticut',work:'Graphic Design Department Head at Oliver Wolcott Technical HS',choose:'I grew up loving art and designing things, specifically clothing.',stay:'OWTS taught me that you can take a passion for art and turn it into a profession.',prepared:'At NCCC I was light years ahead, which gave me confidence and room to experiment.',links:[['Portfolio','https://rb.gy']]}
-];
-const cards=document.getElementById('cards'), profiles=document.getElementById('profiles');
-alumni.forEach(a=>{const id=a.nav.toLowerCase();cards.insertAdjacentHTML('beforeend',`<article class="card"><img src="${a.image}" alt="${a.name}"><div><h3>${a.nav}</h3><small>CLASS OF ${a.year}</small><p class="quote">“${a.quote}”</p><a class="read" href="#${id}">Read More</a></div></article>`);profiles.insertAdjacentHTML('beforeend',`<section class="alumni-detail" id="${id}"><div class="wrap split"><div class="portrait"><img src="${a.image}" alt="${a.name}"><blockquote>“${a.quote}”</blockquote></div><article><span class="eyebrow">Class of ${a.year}</span><h2>${a.name}</h2>${a.college?`<div class="profile"><h4>College Experience</h4><p>${a.college}</p></div>`:''}<div class="profile"><h4>Current Occupation</h4><p>${a.work}</p><h4>What made you choose graphics in high school?</h4><p>“${a.choose}”</p><h4>What made you decide to stay in this field?</h4><p>“${a.stay}”</p><h4>Did graphics better prepare you for college and work?</h4><p>“${a.prepared}”</p><h4>Links</h4><p>${a.links.map(l=>`<a href="${l[1]}" target="_blank" rel="noopener">${l[0]}</a>`).join(' · ')}</p></div></article></div></section>`)});
-</script>
+  <header class="topbar">
+    <nav class="nav">
+      <a class="brand" href="#home">OWTS Graphic Design<br>Alum</a>
+      <div class="links">
+        <a href="#home">Home</a>
+        <a href="#alumni">Alumni</a>
+        <a href="#about">About</a>
+        <a href="#questions">Questions?</a>
+      </div>
+    </nav>
+  </header>
+
+  <main id="home">
+    <section class="hero">
+      <div class="hero-inner">
+        <h1>OWTS Graphic Design Alum</h1>
+        <p>Graphic Design and Digital Media alumni stories from Oliver Wolcott Technical High School.</p>
+        <a class="btn" href="#alumni">Meet the Alumni</a>
+      </div>
+    </section>
+
+    <section id="about">
+      <div class="wrap intro">
+        <img src="https://static.wixstatic.com/media/f324a7_6b2cac74b6fd431399838af5d510baa3~mv2.png/v1/fill/w_980,h_735,al_c,q_90/GRAPHICS%20PIC.png" alt="Graphic design classroom">
+        <div>
+          <span class="eyebrow">Graphic Design and Digital Media</span>
+          <h2>OWTS Graphics Dept.</h2>
+          <p class="lead">The Graphic Design department at Oliver Wolcott Technical High School is a multi-layered learning experience offered through the school’s exploratory program to students entering in 9th grade.</p>
+          <p>Over four years, graphics students learn the essential skills required to excel in graphic design and digital media. Through projects, assessments and presentations, students gain deeper understanding of the Adobe Creative Suite as well as real-life production work from local businesses.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="alumni">
+      <div class="wrap">
+        <span class="eyebrow">Stories</span>
+        <h2>Alumni</h2>
+        <div class="grid" id="cards"></div>
+      </div>
+    </section>
+
+    <div id="profiles"></div>
+
+    <section id="questions" class="contact">
+      <div class="wrap">
+        <span class="eyebrow">Questions?</span>
+        <h2>Get in touch</h2>
+        <div class="box">
+          <p>Deciding which trade you want can be difficult. For questions about the program, curriculum, or studying graphic design at Oliver Wolcott Tech:</p>
+          <p><strong>Email</strong><br><a href="mailto:david.garcia@cttech.org">david.garcia@cttech.org</a></p>
+          <p><strong>Phone</strong><br><a href="tel:8604965319">860.496.5319</a></p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">OWTS Graphic Design Alum — static HTML recreation for GitHub and Vercel.</footer>
+
+  <script>
+    const alumni = [
+      {name:'Rachel Rosa',nav:'Rachel',year:'2014',image:'https://static.wixstatic.com/media/f324a7_ce6f69fd09bc4c798b080aede1f7865e~mv2.png/v1/crop/x_0,y_0,w_1593,h_2233/fill/w_394,h_552,al_c,q_85/rachel.png',quote:'I was one of the first students in my class to receive a paid internship as well as a full-time job offer after graduation.',college:'BFA: Visual Communication Design – University of Hartford',work:'Art Director / WORX Branding',choose:'Passion for art and design, lots of career paths to choose from.',stay:'Constant love for learning and maintaining skills, ability to specialize in animation, illustration, 3D, and the desire to create daily.',prepared:'Yes, I entered the UHart design program at a much higher level so I was able to advance much more quickly.',links:[['worxbranding.com','https://worxbranding.com'],['rachelrosadesign.myportfolio.com','https://rachelrosadesign.myportfolio.com']]},
+      {name:'Zoe Orie',nav:'Zoe',year:'2021',image:'https://static.wixstatic.com/media/f324a7_806ea782c09c4c4d8a9d8e2e8516116d~mv2.jpg/v1/crop/x_0,y_58,w_1170,h_1639/fill/w_394,h_552,al_c,q_80/zoe.jpg',quote:"I would have never found this career if not for OWTS, and now I can't see myself doing anything else.",college:'UConn BFA in Digital Media and Design, Web Design and Interactive Media concentration.',work:'5W PR, New York, NY',choose:'After exploratory, I realized I had a passion for design that I didn’t know existed.',stay:'OWTS set me up with a great foundation that I am now expanding upon with different mediums, platforms, and design pathways.',prepared:'OWTS graphics allowed me to start my career early and gave me a solid base of skills that I’m constantly expanding.',links:[['zoeorie.com','https://zoeorie.com']]},
+      {name:'Emily Moses',nav:'Emily',year:'2017',image:'https://static.wixstatic.com/media/f324a7_e79dcba6e8724d438f4e9b57da12348f~mv2.jpeg/v1/crop/x_26,y_0,w_879,h_1232/fill/w_394,h_552,al_c,q_80/emily.jpeg',quote:'I developed a passion for video editing when I was 15 and that passion never died!',college:'UConn Stamford — BA Digital Media and Design',work:'Assistant Editor — MrBeast',choose:'Through exploratory I became very interested in what the shop had to offer.',stay:'I developed a passion for video editing when I was 15 and that passion never died.',prepared:'Being taught the Adobe Suite throughout high school gave me the skills to excel in college and production.',links:[['Portfolio','https://emosesmedia-portfolio.squarespace.com/']]},
+      {name:'Laura Calver',nav:'Laura',year:'2015',image:'https://static.wixstatic.com/media/f324a7_442d715eb7aa460c91f05804cce520b5~mv2.png/v1/crop/x_402,y_0,w_954,h_1338/fill/w_394,h_552,al_c,q_85/laura.png',quote:'Having a background in graphics prior to becoming a worker has made me more confident.',college:'',work:'Digital Print Associate / Art Department',choose:'I was really into drawing at the time, and Graphics was the closest I was going to get to drawing without college.',stay:'I work in the manufacturing side and enjoy paper, print solutions, presses, and troubleshooting.',prepared:'100%. Having a background made me more confident with terminology and processes.',links:[['Threshold Security','https://www.thresholdsecurity.com/m/default_mobile.asp']]},
+      {name:'Dylan Hull',nav:'Dylan',year:'2021',image:'https://static.wixstatic.com/media/f324a7_30d3d1a6b951454399d6dfb0abb828c6~mv2.png/v1/crop/x_0,y_36,w_1244,h_1743/fill/w_394,h_552,al_c,q_85/dylan.png',quote:'I’ve always had a passion for digital media.',college:'Digital Design & Media at Northwestern',work:'Production Assistant at Harwinton Graphics and Social Media Manager for Organic Cotton Plus',choose:'The opportunity to further my skills and get hands-on experience instantly made me choose graphics.',stay:'The inspiration from Mr. Garcia kept me going in the field.',prepared:'Hands-on production, machines, and screen printing helped me get the job I have now.',links:[['Instagram','https://instagram.com/dylangfxs/']]},
+      {name:'Steven Bechard',nav:'Steven',year:'2018',image:'https://static.wixstatic.com/media/f324a7_159f1854caa64efb93a42325f30eca88~mv2.png/v1/crop/x_207,y_0,w_1112,h_1558/fill/w_394,h_552,al_c,q_85/steven.png',quote:'I liked that graphics allowed me to be both creative and unique.',college:'',work:'Freelance Graphic Designer and Owner of BProuder',choose:'The exploratory graphics instructor helped me discover my calling.',stay:'Graphics allowed me to be both creative and unique.',prepared:'Taking this trade gave me a much better foundation in design.',links:[['Bprouder.com','https://Bprouder.com']]},
+      {name:'Kaitlyn Carey',nav:'Kaitlyn',year:'2013',image:'https://static.wixstatic.com/media/f324a7_a0463284d40248608b5ab376c1cd6529~mv2.png/v1/crop/x_93,y_0,w_407,h_570/fill/w_394,h_552,al_c,q_85/kaitlyn.png',quote:'Technical school gave me creative problem-solving skills.',college:'',work:'Sampling Department Manager — twenty2 Wallpaper + Textiles',choose:'A love for photography.',stay:'The ability to work with creative individuals in a constantly evolving arts-based industry.',prepared:'Technical school gave me creative problem-solving skills that have made me successful.',links:[['TWENTY2.NET','https://twenty2.net'],['HEVVYBYKC.COM','https://hevvybykc.com']]},
+      {name:'Miyah A',nav:'Miyah',year:'2020',image:'https://static.wixstatic.com/media/f324a7_aed251d8a64a435b9f022f7ce0e262c9~mv2.jpeg/v1/crop/x_58,y_0,w_1090,h_1527/fill/w_394,h_552,al_c,q_80/miyah.jpeg',quote:'I use my graphic design experience to design tattoo stencils, business cards and aftercare sheets.',college:'Northwestern Community College Graphic Design program',work:'Tattoo apprentice at Xclusive Ink in Rocky Hill, CT',choose:'I love art, and through that developed a love for design.',stay:'I’ve always wanted to do something creative and pursue freelancing.',prepared:'Graphic Design prepared me for college and put me ahead of my class.',links:[['Design work','https://miyaha1023.wixsite.com/mysite/design-work']]},
+      {name:'Angeleah C',nav:'Angel',year:'2023',image:'https://static.wixstatic.com/media/f324a7_4207bf1524ef40e593576238ef9a0669~mv2.jpeg/v1/crop/x_0,y_89,w_1284,h_1799/fill/w_394,h_552,al_c,q_80/angel.jpeg',quote:'Graphic design gives me freedom and the ability to be creative however I want.',college:'Northwestern Community College — Marketing',work:'Freelance Graphic Designer',choose:'I picked graphics on a whim, but I’ve always had a passion for creating work people could see.',stay:'The opportunities in this field are endless and there is so much to explore.',prepared:'Adobe software, typography, layout and printing gave me a head start.',links:[['Behance','https://www.behance.net/angeleahcastillo']]},
+      {name:'Dave G',nav:'Dave',year:'1999',image:'https://static.wixstatic.com/media/f324a7_0ef233bedfab4946b56f30dda40f3ce7~mv2.jpg/v1/crop/x_784,y_0,w_1598,h_2239/fill/w_394,h_552,al_c,q_80/dave.jpg',quote:'OWTS allowed me to turn my childhood interest into a life-long profession.',college:'Northwestern Community College; University of Connecticut',work:'Graphic Design Department Head at Oliver Wolcott Technical HS',choose:'I grew up loving art and designing things, specifically clothing.',stay:'OWTS taught me that you can take a passion for art and turn it into a profession.',prepared:'At NCCC I was light years ahead, which gave me confidence and room to experiment.',links:[['Portfolio','https://rb.gy']]}
+    ];
+
+    const cards = document.getElementById('cards');
+    const profiles = document.getElementById('profiles');
+
+    alumni.forEach(a => {
+      const id = a.nav.toLowerCase();
+
+      cards.insertAdjacentHTML('beforeend', `
+        <article class="card">
+          <img src="${a.image}" alt="${a.name}">
+          <div>
+            <h3>${a.nav}</h3>
+            <small>CLASS OF ${a.year}</small>
+            <p class="quote">“${a.quote}”</p>
+            <a class="read" href="#${id}">Read More</a>
+          </div>
+        </article>
+      `);
+
+      profiles.insertAdjacentHTML('beforeend', `
+        <section class="alumni-detail" id="${id}">
+          <div class="wrap split">
+            <div class="portrait">
+              <img src="${a.image}" alt="${a.name}">
+              <blockquote>“${a.quote}”</blockquote>
+            </div>
+            <article>
+              <span class="eyebrow">Class of ${a.year}</span>
+              <h2>${a.name}</h2>
+              ${a.college ? `<div class="profile"><h4>College Experience</h4><p>${a.college}</p></div>` : ''}
+              <div class="profile">
+                <h4>Current Occupation</h4>
+                <p>${a.work}</p>
+                <h4>What made you choose graphics in high school?</h4>
+                <p>“${a.choose}”</p>
+                <h4>What made you decide to stay in this field?</h4>
+                <p>“${a.stay}”</p>
+                <h4>Did graphics better prepare you for college and work?</h4>
+                <p>“${a.prepared}”</p>
+                <h4>Links</h4>
+                <p>${a.links.map(l => `<a href="${l[1]}" target="_blank" rel="noopener">${l[0]}</a>`).join(' · ')}</p>
+              </div>
+            </article>
+          </div>
+        </section>
+      `);
+    });
+  </script>
 </body>
 </html>
